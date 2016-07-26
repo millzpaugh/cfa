@@ -40,7 +40,7 @@ function displayForecastData(){
 	}    
 }
 
-function retrieveWeatherDataForAllLocations(param, locations, callback){
+function retrieveWeatherDataForAllLocations(param, locations){
 	for (i=0;i<locations.length;i++){
 		retrieveWeatherData(param, locations[i])
 	}

@@ -4,7 +4,7 @@ function retrieveWeatherData(param, location){
 	$.ajax({
 		url: 'http://api.openweathermap.org/data/2.5/' + param + '?q=' + location + '&APPID=dd6d612e24b7d9caa94e93448aaea752', 
 		type: 'GET', 
-		dataType: 'json', 
+		dataType: 'jsonp', 
 		success: function(response){
 			weatherData = response; 
 			displayWeatherData(response); 

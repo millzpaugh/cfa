@@ -21,8 +21,8 @@ function displayWeatherData(){
 	var cityName = weatherData.name.replace(' ', '')
 	var cityForecast =  $("<ul id=" + cityName + "><h3>" + weatherData.name + "</h3></ul>");
 	$("div#forecast").append(cityForecast); 
-    var degreesF = Math.round((weatherData.main.temp- 273) * 9/5 + 32);
-    var temp =  $("<li class='temp'> It is currently " + degreesF + " degrees Fahrenheit in " + weatherData.name + " with " + weatherData.weather[0].description + ".</li>");
+	var degreesF = Math.round((weatherData.main.temp- 273) * 9/5 + 32);
+	var temp =  $("<li class='temp'> It is currently " + degreesF + " degrees Fahrenheit in " + weatherData.name + " with " + weatherData.weather[0].description + ".</li>");
     $("ul#" + cityName).append(temp); 
 }
 

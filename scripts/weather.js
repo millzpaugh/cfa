@@ -35,7 +35,7 @@ function displayForecastData(){
 		var date = weatherData.list[i].dt_txt.slice(0, 16)
 		var description = weatherData.list[i].weather[0].description
 		var degreesF = Math.round((weatherData.list[i].main.temp- 273) * 9/5 + 32);
-    	var forecast =  $("<li class='temp'>On " + date + " it will be " + degreesF + " degrees Fahrenheit in " + weatherData.city.name + " with " + description + ".</li>");
+    	var forecast =  $("<li class='temp'>" + date + " -- It will be " + degreesF + " degrees Fahrenheit in " + weatherData.city.name + " with " + description + ".</li>");
     	$("ul#" + cityName).append(forecast); 
 	}    
 }
